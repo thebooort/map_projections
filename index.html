@@ -1,51 +1,62 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Download Image</title>
+
+  <title>View Image</title>
 
   <style>
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      margin: 0;
-      background: #f5f5f5;
-    }
-
-    .box {
-      text-align: center;
-      background: white;
-      padding: 40px;
-      border-radius: 14px;
-      box-shadow: 0 4px 20px #0002;
-    }
-
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 15px 25px;
       background: #111;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
       color: white;
-      text-decoration: none;
-      border-radius: 8px;
+    }
+
+    img {
+      width: min(90vw, 700px);
+      height: auto;
+      border-radius: 10px;
+      cursor: zoom-in;
+      box-shadow: 0 10px 40px rgba(0,0,0,.5);
+      transition: transform .2s;
+    }
+
+    img:hover {
+      transform: scale(1.02);
+    }
+
+    p {
+      opacity: .7;
     }
   </style>
 </head>
 
 <body>
 
-<div class="box">
-  <h1>Download Image</h1>
-  <p>High res · 17 MB</p>
+  <div class="container">
 
-  <a href="map_projections.png" download>
-    Download Image
-  </a>
-</div>
+    <a href="map_projections.png" target="_blank">
+      <img
+        src="small.jpg"
+        alt="High-resolution image"
+      >
+    </a>
+
+    <p>Click the image to view it in full resolution</p>
+
+  </div>
 
 </body>
 </html>
+```
